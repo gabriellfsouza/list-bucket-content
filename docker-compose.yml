@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  list:
+    image: node:20
+    volumes:
+      - ~/.aws:/home/node/.aws
+      - .:/home/node/list-bucket-content
+    working_dir: /home/node/list-bucket-content
+    user: node
+    command: node index.js
